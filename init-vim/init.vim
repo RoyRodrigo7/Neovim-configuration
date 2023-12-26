@@ -1,12 +1,14 @@
+
 set encoding=UTF-8
 set clipboard=unnamedplus " Acces to clipboard
 set number
 set cursorline
-set tabstop=2      
-set shiftwidth=2   " Establece el ancho de sangría en 2 espacios
+set tabstop=4      
+set shiftwidth=4   " Establece el ancho de sangría en 2 espacios
 set expandtab      " Convierte las tabulaciones en espacios
 set showcmd
 set showmatch
+set noswapfile
 syntax enable
 " ==================================================================
 
@@ -35,13 +37,11 @@ Plug 'preservim/nerdcommenter'
 " Terminal
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
-" Theme Gruvbox
-"Plug 'sainnhe/gruvbox-material'
+" Theme
 Plug 'wadackel/vim-dogrun'
 
-"Coc
+" Coc nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 
 call plug#end()
 
@@ -77,11 +77,8 @@ nnoremap <C-x> :%d<CR>
 " for copy all code
 nnoremap <C-c> :%y<CR>
 
-" Theme
-"set background=dark
-"let g:gruvbox_material_background='medium'
+" Theme use 
 colorscheme dogrun
-
 
 " dividir la pantalla en 2
 nnoremap <Leader>v :vsplit %:p<CR>
@@ -90,5 +87,3 @@ nnoremap <Leader>v :vsplit %:p<CR>
 let g:user_emmet_mode='n'
 let g:user_emmet_leader_key=','
 
-" Mapeo para comentar/descomentar línea
-map <Leader>c :NERDComment<CR>
